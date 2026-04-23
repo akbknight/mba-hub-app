@@ -71,12 +71,12 @@ export default function HubDashboard() {
             </div>
             
             <div className="flex items-center space-x-4 border-l border-slate-200 pl-6 ml-2">
-               <button className="text-slate-400 hover:text-blue-600 transition-colors relative">
+               <button className="text-slate-400 hover:text-blue-600 transition-colors relative z-20 cursor-pointer">
                  <Bell size={22} />
                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
                </button>
                
-               <div className="group relative cursor-pointer">
+               <div className="group relative cursor-pointer z-20">
                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=MyAvatarlol" alt="Profile" className="w-10 h-10 rounded-full border-2 border-slate-200 bg-slate-50 group-hover:border-blue-500 transition-colors object-cover" />
                  <div className="absolute right-0 mt-3 w-60 bg-white border border-slate-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all flex flex-col py-2 z-50">
                     <div className="px-4 py-3 border-b border-slate-100 mb-2">
@@ -86,10 +86,10 @@ export default function HubDashboard() {
                           {userEmail}
                        </p>
                     </div>
-                    <button className="flex items-center px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:text-blue-600">
+                    <button className="flex w-full items-center px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:text-blue-600 cursor-pointer relative z-20">
                       <Settings size={16} className="mr-2" /> Account Settings
                     </button>
-                    <button onClick={handleLogout} className="flex items-center px-4 py-2.5 text-sm font-semibold text-red-600 hover:bg-red-50 mt-1 border-t border-slate-100">
+                    <button onClick={handleLogout} className="flex w-full items-center px-4 py-2.5 text-sm font-semibold text-red-600 hover:bg-red-50 mt-1 border-t border-slate-100 cursor-pointer relative z-20">
                       <LogOut size={16} className="mr-2" /> Disconnect
                     </button>
                  </div>
@@ -109,7 +109,7 @@ export default function HubDashboard() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`pb-4 text-sm font-bold transition-all relative ${activeTab === tab ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}`}
+              className={`pb-4 text-sm font-bold transition-all relative z-20 cursor-pointer ${activeTab === tab ? "text-blue-600" : "text-slate-500 hover:text-slate-800"}`}
             >
               {tab}
               {activeTab === tab && (

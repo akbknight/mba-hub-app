@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { GraduationCap, Users, Coffee, Sparkles } from "lucide-react";
 import AuthModal from "@/components/AuthModal";
+import Link from "next/link";
 
 export default function LandingPage() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function LandingPage() {
         </div>
         <button 
           onClick={() => setIsAuthOpen(true)}
-          className="text-slate-600 font-semibold hover:text-blue-600 transition-colors"
+          className="text-slate-600 font-semibold hover:text-blue-600 transition-colors relative z-20 cursor-pointer"
         >
           Sign In
         </button>
@@ -57,16 +58,19 @@ export default function LandingPage() {
             Connect, study, and socialize with verified university peers. Join the exclusive hub designed for the sharpest minds in the country.
           </motion.p>
 
-          <motion.div variants={childVars} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+          <motion.div variants={childVars} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 relative z-20">
             <button 
               onClick={() => setIsAuthOpen(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-lg shadow-[0_8px_20px_-6px_rgba(37,99,235,0.5)] transition-all transform hover:-translate-y-0.5"
+              className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-lg shadow-[0_8px_20px_-6px_rgba(37,99,235,0.5)] transition-all transform hover:-translate-y-0.5 relative z-20 cursor-pointer"
             >
               Join with .edu Email
             </button>
-            <button className="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold text-lg shadow-sm hover:border-slate-300 transition-all">
+            <Link 
+              href="#learn-more"
+              className="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold text-lg shadow-sm hover:border-slate-300 transition-all hover:bg-slate-50 cursor-pointer block text-center relative z-20"
+            >
               Learn More
-            </button>
+            </Link>
           </motion.div>
 
           {/* Value Props */}

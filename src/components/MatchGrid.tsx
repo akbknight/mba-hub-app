@@ -111,7 +111,7 @@ export default function MatchGrid() {
               {/* Action Button */}
               <button 
                 onClick={() => handleConnect(profile)}
-                className="w-full py-2.5 bg-blue-50 hover:bg-blue-600 border border-blue-100 hover:border-blue-600 text-blue-700 hover:text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center group/btn"
+                className="w-full py-2.5 bg-blue-50 hover:bg-blue-600 border border-blue-100 hover:border-blue-600 text-blue-700 hover:text-white rounded-xl text-sm font-bold transition-all flex items-center justify-center group/btn relative z-10 cursor-pointer"
               >
                 <MessageSquareHeart size={16} className="mr-2 group-hover/btn:scale-110 transition-transform" />
                 Connect

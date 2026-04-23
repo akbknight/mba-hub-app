@@ -81,7 +81,7 @@ export default function RendezvousModal() {
           <div className="grid grid-cols-2 gap-4">
             <button 
               onClick={() => setMethod("in-person")}
-              className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+              className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group relative z-10 cursor-pointer"
             >
               <div className="w-14 h-14 bg-white shadow-sm rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <MapPin className="text-blue-600" size={24} />
@@ -95,7 +95,7 @@ export default function RendezvousModal() {
                 setMethod("virtual");
                 generateVirtualRoom();
               }}
-              className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-gold-50 border border-slate-200 hover:border-gold-300 rounded-2xl transition-all group"
+              className="flex flex-col items-center justify-center p-6 bg-slate-50 hover:bg-gold-50 border border-slate-200 hover:border-gold-300 rounded-2xl transition-all group relative z-10 cursor-pointer"
             >
               <div className="w-14 h-14 bg-white shadow-sm rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Video className="text-gold-600" size={24} />
@@ -263,7 +263,7 @@ export default function RendezvousModal() {
                 <p className="text-xs text-blue-600 font-bold">{activeMatch.name}</p>
               </div>
             </div>
-            <button onClick={handleClose} className="text-slate-400 hover:text-slate-600 transition-colors bg-slate-50 hover:bg-slate-100 p-2 rounded-full">
+            <button onClick={handleClose} className="text-slate-400 hover:text-slate-600 transition-colors bg-slate-50 hover:bg-slate-100 p-2 rounded-full relative z-20 cursor-pointer">
               <X size={18} />
             </button>
           </div>
